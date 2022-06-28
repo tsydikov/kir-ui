@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
-}
-
 .container {
     position: relative;
     display: flex;
@@ -16,13 +9,14 @@
     width: fit-content;
     background: transparent;
     padding-left: 40px;
+    font-family: 'Oswald', sans-serif;
 }
-ul {
+.ulWrapper {
     position: relative;
     transform: skewY(-15deg);
 }
 
-ul li {
+.ulWrapper li {
     position: relative;
     list-style: none;
     width: 100%;
@@ -32,12 +26,12 @@ ul li {
     text-align: left;
 }
 
-ul li:hover {
+.ulWrapper li:hover {
     background: #33a3ee;
     transform: translateX(50px);
 }
 
-ul li::before {
+.ulWrapper li::before {
     content: '';
     position: absolute;
     top: 0;
@@ -50,11 +44,11 @@ ul li::before {
     transition: 0.5s;
 }
 
-ul li:hover::before {
+.ulWrapper li:hover::before {
     background: #1f5378;
 }
 
-ul li::after {
+.ulWrapper li::after {
     content: '';
     position: absolute;
     top: -40px;
@@ -67,11 +61,11 @@ ul li::after {
     transition: 0.5s;
 }
 
-ul li:hover::after {
+.ulWrapper li:hover::after {
     background: #2982b9;
 }
 
-ul li {
+.ulWrapper li {
     text-decoration: none;
     color: #999;
     display: block;
@@ -81,10 +75,10 @@ ul li {
     cursor: pointer;
 }
 
-ul li:hover {
+.ulWrapper li:hover {
     color: #fff;
 }
 
-ul li:last-child::after {
+.ulWrapper li:last-child::after {
     box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
 }

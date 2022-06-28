@@ -1,5 +1,5 @@
 import React, {FC, ReactNode} from 'react';
-import './IsometricMenu.css'
+import styles from './IsometricMenu.module.scss'
 
 export interface MenuItem {
     text?: string;
@@ -13,8 +13,8 @@ export interface IsometricMenuProps {
 
 const IsometricMenu: FC<IsometricMenuProps> = ({ menuItems }) => {
     return (
-        <div className="container">
-            <ul>
+        <div className={styles.container}>
+            <ul className={styles.ulWrapper}>
                 {menuItems.map((item, index) => <li
                     role="presentation"
                     key={index}
